@@ -27,7 +27,7 @@ sudo bash ocserv-install.sh
 1. Install Docker
 2. Build docker image
 ```bash
-docker build -t ocserv https://github.com/iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv.git
+docker build -t secondserver https://github.com/sinakaya/openconnectv2.git#main
 ```
 
 3. Run docker container
