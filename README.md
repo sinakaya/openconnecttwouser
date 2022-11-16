@@ -27,7 +27,7 @@ sudo bash ocserv-install.sh
 1. Install Docker
 2. Build docker image
 ```bash
-docker build -t twouserserver https://github.com/sinakaya/openconnectv2.git#main
+docker build -t twouserserver https://github.com/sinakaya/openconnecttwouser.git#main
 ```
 
 3. Run docker container
