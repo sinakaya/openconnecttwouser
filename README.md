@@ -27,42 +27,42 @@ sudo bash ocserv-install.sh
 1. Install Docker
 2. Build docker image
 ```bash
-docker build -t secondserver https://github.com/sinakaya/openconnectv2.git#main
+docker build -t twouserserver https://github.com/sinakaya/openconnectv2.git#main
 ```
 
 3. Run docker container
 ```bash
-docker run --name secondserver --privileged -p 443:443 -p 443:443/udp -d ocserv
+docker run --name twouserserver --privileged -p 443:443 -p 443:443/udp -d twouserserver
 ```
 
 4. Add user
 ```bash
-docker exec -ti secondserver ocpasswd -c /etc/ocserv/ocpasswd testUserName
+docker exec -ti twouserserver ocpasswd -c /etc/ocserv/ocpasswd testUserName
 ```
 
 5. Change user password
 ```bash
-docker exec -ti secondserver ocpasswd -c /etc/ocserv/ocpasswd testUserName
+docker exec -ti twouserserver ocpasswd -c /etc/ocserv/ocpasswd testUserName
 ```
 
 6. Delete user
 ```bash
-docker exec -ti secondserver ocpasswd -c /etc/ocserv/ocpasswd -d testUserName
+docker exec -ti twouserserver ocpasswd -c /etc/ocserv/ocpasswd -d testUserName
 ```
 
 7. Lock user
 ```bash
-docker exec -ti secondserver ocpasswd -c /etc/ocserv/ocpasswd -l testUserName
+docker exec -ti twouserserver ocpasswd -c /etc/ocserv/ocpasswd -l testUserName
 ```
 
 8. Unlock user
 ```bash
-docker exec -ti secondserver ocpasswd -c /etc/ocserv/ocpasswd -u testUserName
+docker exec -ti twouserserver ocpasswd -c /etc/ocserv/ocpasswd -u testUserName
 ```
 
 9. Show all users and their hashed password
 ```bash
-docker exec -ti secondserver cat /etc/ocserv/ocpasswd
+docker exec -ti twouserserver cat /etc/ocserv/ocpasswd
 ```
 
 ## Features
